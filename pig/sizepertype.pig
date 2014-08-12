@@ -8,12 +8,14 @@
 
 -- The jwat-*.jar's are in HDFS on a shared locations:
 REGISTER 'hdfs://head02.hathi.surfsara.nl/jars/jwat-*.jar';
+-- REGISTER '/media/sf_naward16/lib/jwat-*.jar';
 
 -- You might want to adapt the warcutils PigLoader to expose additional fields
 -- from the warc files. If you do this, change the line below to point to your
 -- version of warcutils.jar.
 REGISTER 'hdfs://head02.hathi.surfsara.nl/jars/warcutils.jar';
 --REGISTER '/home/naward/warcutils.jar';
+-- REGISTER '/media/sf_naward16/warcutils.jar';
 --REGISTER 'hdfs://head02.hathi.surfsara.nl/user/nawardXX/warcutils.jar';
 
 DEFINE WarcFileLoader nl.surfsara.warcutils.pig.WarcSequenceFileLoader();
